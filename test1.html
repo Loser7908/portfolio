@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Footer Example</title>
+    <style>
+        /* Footer Styles */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f0f0f0;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .left-side,
+        .right-side {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Social Media Icons */
+        .social-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <footer>  
+        <div class="left-side">
+            <div>Contact Me:</div>
+            <a href="tel:+1234567890">Phone: +1234567890</a>
+            
+            <a href="#" target="_blank"><img class="social-icon" src="facebook_logo.png" alt="Facebook"></a>
+            <a href="#" target="_blank"><img class="social-icon" src="linkedin_logo.png" alt="LinkedIn"></a>
+            <a href="#" target="_blank"><img class="social-icon" src="gfg_logo.png" alt="GeeksforGeeks"></a>
+        </div>
+        
+        <div class="right-side">
+            <form>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email ID:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mobile">Mobile No:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+                <label for="message">How can I help you?</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </footer>
+</body>
+
+</html>

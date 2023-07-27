@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Web Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .container p {
+            color: white;
+            font-size: 24px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Add CSS animation for the transition effect */
+        @keyframes slideUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100vh);
+            }
+        }
+
+        .slideUp-animation {
+            animation: slideUp .2s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="messageContainer">
+        <p>Hello</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var messageContainer = document.getElementById("messageContainer");
+
+            var greetings = ["Bonjour", "Hola", "Hallo", "নমস্কার"];
+
+            var currentGreetingIndex = 0;
+
+            function updateMessage() {
+                var greetingText = messageContainer.querySelector("p");
+                if (greetingText) {
+                    greetingText.textContent = greetings[currentGreetingIndex];
+                    currentGreetingIndex = (currentGreetingIndex + 1) % greetings.length;
+                }
+            }
+
+            setTimeout(function showGreetings() {
+                updateMessage();
+                setTimeout(showGreetings, 200); 
+            }, 300);
+            setTimeout(function() {
+                messageContainer.classList.add("slideUp-animation");
+                setTimeout(function () {
+                    window.location.href = "main.html"; 
+                }, 150); // 1500 milliseconds = 1.5 seconds
+            }, 3000); // 3000 milliseconds = 3 seconds
+        });
+    </script>
+</body>
+</html>

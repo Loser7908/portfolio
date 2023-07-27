@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
+    
+</head>
+
+<body>
+    <header>
+        <div class="left-side">
+            <a href="#"><b>Port<span>folio</span></b></a>
+        </div>
+        <div class="right-side">
+            <a href="#"><b>Home</b></a>
+            <a href="#About"><b>About Me</b></a>
+            <a href="#services"><b>Services</b></a>
+            <a href="#"><b>Contact</b></a>
+            <button id="modeButton">&#x2600;</button>
+        </div>
+    </header>
+    <script>
+        const modeButton = document.getElementById("modeButton");
+        modeButton.addEventListener("click", toggleDarkMode);
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            const buttonText = modeButton.textContent;
+            modeButton.textContent = buttonText === "Dark " ? "Light " : "Dark ";
+        }
+    </script>
+    <div>
+        <h1 id="delayedText">
+            <b>
+                <h1 id="hi"><span>Hi</span>,I'm</h1>
+            </b>
+            <img class="image" style="border-radius: 50%;" src="Screenshot 2023-07-26 123902.png" alt="photo">
+            <b>
+                <h1>Rishi <span>Bakshi</span></h1>
+            </b>
+            <b style="font-size: 30px;">
+                <h1 style="font-size: 40px;margin: 0px 0px;"><b>Web <span>Developer.</span></b></h1>
+            </b>
+            <b style="font-size: 20px;">Currenly Studying CSE <span>Aspiring MERN Stack Developer</span></b><br>
+            <b><a href="https://drive.google.com/file/d/1eWR8pjFfOZdgdSLEzqlRMQX8p6MlhNKt/view?usp=sharing"><button
+                        class="butt">Resume</button></a></b>
+        </h1>
+
+        <script>
+            setTimeout(() => {
+                const delayedTextElement = document.getElementById("delayedText");
+                delayedTextElement.classList.add("show");
+            }, 2000); // 2000 milliseconds = 2 seconds
+        </script>
+
+    </div>
+    <div id="About">
+        <table>
+            <tr>
+                <td style="height: auto;margin-left: 100px;">
+                    <img src="Screenshot 2023-07-26 123902.png" alt="Image"
+                        style="max-width: 60%; height: auto;padding: 20px;padding-left: 287px;">
+                </td>
+                <td style="padding: 0px 10px;width: 50%;">
+                    <h2 style="color:rgb(231, 196, 196); margin-bottom: 10px;">About <span>Me</span></h2>
+                    <p style="color:rgb(243, 212, 212);"><span>Web</span> Developer</p>
+                    <p style="font-size: 15px;">As a beginner in the field of Information Technology, I strive to
+                        associate myself with an organization where I can utilize my skills in
+                        the best possible manner, which further gives me an opportunity to grow in my career journey
+                        while contributing to the development
+                        of the organization.</p>
+                    <div class="container">
+                        <div class="item">
+                            <span>Skill</span>
+                            <div class="hover-text">
+                                C++ , SQL , DBMS , HTML , CSS , TAILWIND, JS, REACT.JS
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>Education</span>
+                            <div class="hover-text">
+                                <pre>
+Bachelor Of Technology In CSE
+Techno India University(2020-2024)
+CGPA:- 8.09
+</pre>
+                                <pre>
+HIGHER SECONDARY(10+2)
+CHHATNA CHANDIDAS VIDYAPITH(2018-2019)
+73.40%
+</pre>
+
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <div id="services">
+        <h4 style="text-align: center; color: white;">What I'm Expert In</h4>
+        <h1 style="text-align: center;margin: 17px 0px;">My <span>Services</span></h1>
+        <div class="contai">
+            <!-- First Template -->
+            <div class="template">
+                <div class="template-content">
+                    &#128394;<br><br>
+                    <span>Web Design</span>
+                    <br><br><br>
+                    As a web Designer, I create visually appealing and user-friendly websites that effectively
+                    communicate my clients' brand and message.
+                    <br><br><br><br>
+                </div>
+            </div>
+
+            <!-- Second Template -->
+            <div class="template">
+                <div class="template-content">
+                    &#128187;
+                    <br><br>
+                    <span>Web development</span>
+                    <br><br><br>
+                    As a web Developer, I specialize in building dynamic and responsive websites that deliver
+                    exceptional user experiences.
+                    <br><br><br><br>
+                </div>
+            </div>
+
+            <!-- Third Template -->
+            <div class="template">
+                <div class="template-content">
+                    &#10002;&#65039;
+                    <br><br>
+                    <span>Creative Design</span>
+                    <br><br><br>
+                    As a creative designs, I apporach each projects with a innovative perspective,seeking to push
+                    bounderies and deliver visually compelling designs.
+                    <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+
+</html>

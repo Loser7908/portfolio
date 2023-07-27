@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+    background-color: #111;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:black;
+    color: white;
+    padding: 20px 50px;
+  }
+
+  .left-side a {
+    color:wheat;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 100px;
+  }
+
+  .right-side a {
+    color: wheat;
+    text-decoration: none;
+    margin-left: 50px;
+  }
+
+  .right-side button {
+    color: black;
+    /*background-color: orchid;*/
+    border: none;
+    cursor: pointer;
+    margin-left: 90px
+    
+  }
+
+  /* Hover effect */
+  .right-side a:hover {
+    color: orange;
+  }
+
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: white;
+  }
+
+  body.dark-mode header {
+    background-color: #111;
+  }
+
+  body.dark-mode header .left-side a {
+    color: #fff;
+  }
+
+  body.dark-mode header .right-side a {
+    color: #fff;
+  }
+
+  body.dark-mode header .right-side button {
+    color: #fff;
+    background-color: #111;
+  }
+
+  span{
+    color: orange;
+  }
+
+  #modeButton{
+    border-radius: 20%;
+  }
+  h1{
+    color: #fff;
+    font-size: 90px;
+   
+  }
+  body.dark-mode h1{
+    color: black;
+  }
+
+  #delayedText {
+    opacity: 0;
+    transition: opacity 2s ease;
+    margin-left: 160px;
+  }
+
+  /* When the class 'show' is added, the element will fade in */
+  #delayedText.show {
+    opacity: 1;
+  }
+
+  h3{
+    color: #fff;
+    font-size: 40px;
+    margin-left: 320px;
+  }
+
+  body.dark-mode h3{
+    color: black;
+  }
+
+  .image{
+    height: auto;
+    width: 25%;
+    float: right;
+    margin-right: 101px;
+    margin-bottom: 49px;
+    margin-top: -174px;
+    border-radius: 100% 100%;
+  }
+  .butt{
+    padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+  }
+  .butt:hover{
+    background-color: darkgoldenrod;
+  }
+
+  tr{
+    color: #fff;
+    font-size: 50px;
+   margin-left: 150px;
+  }
+  body.dark-mode tr{
+    color: black;
+  }
+  .container {
+    display: flex;
+}
+
+/* Styling for each item */
+.item {
+    flex: 1;
+    padding: 10px;
+    border: none; /* Remove the border */
+    cursor: pointer; /* Add cursor style to indicate interactivity */
+    font-size: 25px;
+}
+
+/* Styling for the hover text */
+.hover-text {
+    display: none;
+    margin-top: 5px;
+}
+
+/* Hover effect to show the hover text */
+.item:hover .hover-text {
+    display: block;
+    font-size: 18px;
+}
+
+body.dark-mode h2{
+  color: black;
+}
+
+.contai {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Styling for each template */
+.template {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect and shadow on hover */
+.template:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Text and content inside each template */
+.template-content {
+  padding: 20px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  background-color: rgb(49, 45, 45);
+  border-radius: 10px;
+}
+
+.fleft-side, .fright-side {
+  width: 50%;
+}
+
+.fleft-side {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.fright-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+}
+
+/* Social Media Icons */
