@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-primary-light dark:bg-primary-dark text-light-light dark:text-light-dark;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primary-light/20 dark:bg-primary-dark/20;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-tertiary-light/30 dark:bg-tertiary-dark/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-tertiary-light/50 dark:bg-tertiary-dark/50;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-secondary-light dark:bg-secondary-dark text-primary-light dark:text-primary-dark hover:scale-105 active:scale-95;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-4 relative inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 bg-secondary-light dark:bg-secondary-dark transform scale-x-0 origin-left transition-transform duration-300;
+  }
+
+  .section-title:hover::after {
+    @apply scale-x-100;
+  }
+  
+  .card {
+    @apply bg-primary-light/20 dark:bg-primary-dark/20 rounded-lg p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl;
+  }
+
+  .skill-bar {
+    @apply w-full h-2 bg-tertiary-light/20 dark:bg-tertiary-dark/20 rounded-full overflow-hidden;
+  }
+
+  .skill-progress {
+    @apply h-full bg-gradient-to-r from-secondary-light to-secondary-dark dark:from-secondary-dark dark:to-secondary-light rounded-full transition-all duration-1000;
+  }
+
+  .nav-link {
+    @apply text-tertiary-light dark:text-tertiary-dark hover:text-secondary-light dark:hover:text-secondary-dark transition-colors duration-300 relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-secondary-light dark:bg-secondary-dark transform scale-x-0 origin-left transition-transform duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100;
+  }
+
+  .project-card {
+    @apply bg-primary-light/20 dark:bg-primary-dark/20 rounded-lg overflow-hidden backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl;
+  }
+
+  .project-image {
+    @apply w-full h-64 object-cover transition-transform duration-500;
+  }
+
+  .tech-tag {
+    @apply px-3 py-1 bg-tertiary-light/20 dark:bg-tertiary-dark/20 text-tertiary-light dark:text-tertiary-dark rounded-full text-sm transition-colors duration-300;
+  }
+
+  .contact-input {
+    @apply w-full px-4 py-3 bg-primary-light/20 dark:bg-primary-dark/20 border border-tertiary-light/20 dark:border-tertiary-dark/20 rounded-lg focus:outline-none focus:border-secondary-light dark:focus:border-secondary-dark transition-colors duration-300;
+  }
+
+  /* Skills Page Specific Styles */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .skill-card {
+    @apply card hover:shadow-lg hover:shadow-secondary-light/10 dark:hover:shadow-secondary-dark/10;
+  }
+
+  .skill-icon {
+    @apply w-20 h-20 rounded-full overflow-hidden bg-primary-light/20 dark:bg-primary-dark/20 p-2 transition-transform duration-300;
+  }
+
+  .skill-progress-container {
+    @apply w-full bg-tertiary-light/20 dark:bg-tertiary-dark/20 rounded-full h-2 overflow-hidden;
+  }
+
+  .skill-progress-bar {
+    @apply h-full bg-gradient-to-r from-secondary-light to-secondary-dark dark:from-secondary-dark dark:to-secondary-light rounded-full transition-all duration-500;
+  }
+
+  .category-tab {
+    @apply px-4 py-2 rounded-md transition-colors duration-300 hover:scale-105;
+  }
+
+  .category-tab-active {
+    @apply bg-secondary-light dark:bg-secondary-dark text-primary-light dark:text-primary-dark;
+  }
+
+  .category-tab-inactive {
+    @apply text-tertiary-light dark:text-tertiary-dark hover:text-secondary-light dark:hover:text-secondary-dark;
+  }
+
+  .scroll-button {
+    @apply absolute top-1/2 -translate-y-1/2 z-10 bg-primary-light/80 dark:bg-primary-dark/80 p-2 rounded-full shadow-lg hover:bg-secondary-light dark:hover:bg-secondary-dark transition-colors duration-300;
+  }
+
+  /* Project Hover Effects */
+  .project-card:hover .project-image {
+    @apply scale-110;
+  }
+
+  .project-card:hover .tech-tag {
+    @apply bg-secondary-light/20 dark:bg-secondary-dark/20 text-secondary-light dark:text-secondary-dark;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    @apply fixed inset-0 bg-primary-light/95 dark:bg-primary-dark/95 backdrop-blur-sm z-50;
+  }
+
+  /* Theme Toggle */
+  .theme-toggle {
+    @apply p-2 rounded-full bg-primary-light/20 dark:bg-primary-dark/20 hover:bg-secondary-light/20 dark:hover:bg-secondary-dark/20 transition-colors duration-300;
+  }
+
+  /* Loading Animation */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary-light to-secondary-dark dark:from-secondary-dark dark:to-secondary-light;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-primary-light/20 dark:bg-primary-dark/20 backdrop-blur-sm border border-tertiary-light/20 dark:border-tertiary-dark/20;
+  }
+
+  /* Responsive Typography */
+  @media (max-width: 640px) {
+    .section-title {
+      @apply text-3xl;
+    }
+  }
+
+  /* Print Styles */
+  @media print {
+    .no-print {
+      display: none;
+    }
+    
+    body {
+      @apply bg-white text-black;
+    }
+  }
+}
