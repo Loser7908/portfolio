@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaArrowDown } from 'react-icons/fa';
 import { useTheme } from '../context/ThemeContext';
-import profileImage from '../assets/Profile.jpg';
 
 const Home = () => {
   const { isDarkMode } = useTheme();
+  const profileImage = '/Profile.jpg';
 
   const containerVariants = {
     hidden: { opacity: 0 },
